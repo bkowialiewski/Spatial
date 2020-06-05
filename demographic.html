@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="CSS/mainStyle.css" />
+    <title>Chunking</title>
+</head>
+
+<body class="fade">
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+    <script src="JS/form.js"></script>
+
+    <section class="items">
+
+        <p>Avant de commencer l’expérience, nous avons besoins de quelques informations. Nous vous prions de répondre aux questions suivantes. Nous rappelons que cette étude est totalement anonyme.
+        </p>
+
+        <form onsubmit = "validate()" action="description.html" method = "post">
+
+            <!-- Age of the participant -->
+
+            <label class="dem_txt">Age</label><br/>
+            <input type="number" name="age" id="age" class="field" required/></p>
+
+            <!-- Gender of the participant -->
+
+            <label class="dem_txt", id ="gender">Sexe</label><br/>
+            <span class="radio">
+                <input type="radio" name="genderS" id="femme" class="radio" value="femme"/><label for="femme">Femme</label>
+                <input type="radio" name="genderS" id="homme" class="radio" value="homme"/><label for="homme">Homme</label></p>
+            </span>
+
+            <!-- Education level of the participant -->
+
+            <label class="dem_txt">Niveau d'étude (en années)</label><br/>
+            <input type="number" name="educ" id="educ" class="field" required/><br/><br/>
+
+            <!-- Vision of the participant -->
+
+            <label class="dem_txt">Avez-vous une vision normale ou corrigée (verres, lentilles...)?</label><br/>
+            <span class="radio">
+                <input type="radio" name="vision" id="oui" class="radio" value="oui"/><label for="oui">Oui</label>
+                <input type="radio" name="vision" id="non" class="radio" value="non"/><label for="non">Non</label></p>
+            </span>
+
+            <!-- Handeness -->
+
+            <label for="lat" class="dem_txt">Vous êtes...</label><br/>
+            <span class="radio">
+                <input type="radio" name="lat" id="gauche" class="radio" value="gauche"/><label for="gauche">... gaucher</label><br/>
+            </span>
+            <span class="radio">
+                <input type="radio" name="lat" id="droite" class="radio" value="droite"/><label for="droite">... droitier</label><br/>
+            </span>
+            <span class="radio">
+                <input type="radio" name="lat" id="ambidextre" class="radio" value="amb"/><label for="ambidextre">... ambidextre</label>
+            </span>
+
+            <br/><br/>
+
+            <!-- Neurological problems -->
+
+            <label for="neur" class="dem_txt">Souffrez-vous ou avez-vous souffert de troubles neurologiques ?</label><br>
+            <span class="radio">
+                <input type="radio" name="neur" id="Non_neur" class="radio" value="non"/><label for="Non_neur">Non</label>
+            </span>
+            <span class="radio">
+                <input type="radio" name="neur" id="Oui_neur" class="radio" value="oui"/><label for="Oui_neur">Oui</label></p>
+            </span>
+
+            <label for="app" class="dem_txt">Avez-vous souffert de troubles de l'apprentissage (dyslexie,...) ?</label><br>
+            <span class="radio">
+                <input type="radio" name="app" id="Non_app" class="radio" value="non"/><label for="Non_app">Non</label>
+            </span>
+            <span class="radio">
+                <input type="radio" name="app" id="Oui_app" class="radio" value="oui"/><label for="Oui_app">Oui</label></p>
+            </span>
+
+            <br/><br/>
+
+            <p class="send">
+                <button type = "submit" class = "btn1">Suivant</button>
+            </p>
+
+        </form>
+
+    </section>
+
+</body>
+</html>
